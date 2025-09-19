@@ -16,7 +16,7 @@ let gameOverSwitch = false;
 
 function preload(){
 backgroundImg = loadImage("assets/back2.jpg");
-uWin = loadImage("assets/Uwin.jpg");
+uWin = loadImage("assets/uWin.jpg");
 heart = loadImage("assets/heart.png");
 gameOver = loadImage("assets/gameOver.jpg");
 }
@@ -197,3 +197,4 @@ function update() {
    }
 
 }
+
