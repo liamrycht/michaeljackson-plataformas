@@ -1,0 +1,347 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T12:00:00.000Z" agent="5.0" etag="uber-db-simple" version="22.1.11" type="device">
+  <diagram name="Uber Database" id="uber-database-er">
+    <mxGraphModel dx="2074" dy="1114" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- TÍTULO DEL DIAGRAMA -->
+        <mxCell id="title" value="Sistema de Base de Datos - Uber" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="20" width="400" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- TABLA USUARIOS -->
+        <mxCell id="usuarios_table" value="" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="220" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="usuarios_title" value="USUARIOS" style="text;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;" vertex="1" parent="usuarios_table">
+          <mxGeometry y="26" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="usuarios_pk" value="usuario_id (PK)" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;" vertex="1" parent="usuarios_table">
+          <mxGeometry y="50" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="usuarios_f1" value="nombre" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="usuarios_table">
+          <mxGeometry y="74" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="usuarios_f2" value="apellido" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="usuarios_table">
+          <mxGeometry y="98" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="usuarios_f3" value="celular" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="usuarios_table">
+          <mxGeometry y="122" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="usuarios_f4" value="email" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="usuarios_table">
+          <mxGeometry y="146" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="usuarios_fk1" value="categoria_id (FK)" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=3;" vertex="1" parent="usuarios_table">
+          <mxGeometry y="170" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="usuarios_f5" value="estado_alta" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="usuarios_table">
+          <mxGeometry y="194" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="usuarios_f6" value="fecha_registro" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="usuarios_table">
+          <mxGeometry y="218" width="220" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- TABLA CATEGORIAS_USUARIO -->
+        <mxCell id="categorias_table" value="" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="320" y="100" width="220" height="146" as="geometry"/>
+        </mxCell>
+        <mxCell id="categorias_title" value="CATEGORIAS_USUARIO" style="text;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;" vertex="1" parent="categorias_table">
+          <mxGeometry y="26" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="categorias_pk" value="categoria_id (PK)" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;" vertex="1" parent="categorias_table">
+          <mxGeometry y="50" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="categorias_f1" value="nombre_categoria" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="categorias_table">
+          <mxGeometry y="74" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="categorias_f2" value="descripcion" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="categorias_table">
+          <mxGeometry y="98" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="categorias_f3" value="precio_mensual" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="categorias_table">
+          <mxGeometry y="122" width="220" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- TABLA CONDUCTORES -->
+        <mxCell id="conductores_table" value="" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="590" y="100" width="220" height="194" as="geometry"/>
+        </mxCell>
+        <mxCell id="conductores_title" value="CONDUCTORES" style="text;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;" vertex="1" parent="conductores_table">
+          <mxGeometry y="26" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="conductores_pk" value="conductor_id (PK)" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;" vertex="1" parent="conductores_table">
+          <mxGeometry y="50" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="conductores_f1" value="nombre" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="conductores_table">
+          <mxGeometry y="74" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="conductores_f2" value="apellido" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="conductores_table">
+          <mxGeometry y="98" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="conductores_f3" value="celular" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="conductores_table">
+          <mxGeometry y="122" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="conductores_f4" value="email" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="conductores_table">
+          <mxGeometry y="146" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="conductores_f5" value="licencia_conducir" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="conductores_table">
+          <mxGeometry y="170" width="220" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- TABLA VEHICULOS -->
+        <mxCell id="vehiculos_table" value="" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="860" y="100" width="220" height="218" as="geometry"/>
+        </mxCell>
+        <mxCell id="vehiculos_title" value="VEHICULOS" style="text;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;" vertex="1" parent="vehiculos_table">
+          <mxGeometry y="26" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="vehiculos_pk" value="vehiculo_id (PK)" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;" vertex="1" parent="vehiculos_table">
+          <mxGeometry y="50" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="vehiculos_fk1" value="conductor_id (FK)" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=3;" vertex="1" parent="vehiculos_table">
+          <mxGeometry y="74" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="vehiculos_f1" value="marca" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="vehiculos_table">
+          <mxGeometry y="98" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="vehiculos_f2" value="modelo" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="vehiculos_table">
+          <mxGeometry y="122" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="vehiculos_f3" value="patente" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="vehiculos_table">
+          <mxGeometry y="146" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="vehiculos_f4" value="año" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="vehiculos_table">
+          <mxGeometry y="170" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="vehiculos_f5" value="color" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="vehiculos_table">
+          <mxGeometry y="194" width="220" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- TABLA VIAJES -->
+        <mxCell id="viajes_table" value="" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="320" y="380" width="220" height="314" as="geometry"/>
+        </mxCell>
+        <mxCell id="viajes_title" value="VIAJES" style="text;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;" vertex="1" parent="viajes_table">
+          <mxGeometry y="26" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="viajes_pk" value="viaje_id (PK)" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;" vertex="1" parent="viajes_table">
+          <mxGeometry y="50" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="viajes_fk1" value="usuario_id (FK)" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=3;" vertex="1" parent="viajes_table">
+          <mxGeometry y="74" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="viajes_fk2" value="conductor_id (FK)" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=3;" vertex="1" parent="viajes_table">
+          <mxGeometry y="98" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="viajes_fk3" value="vehiculo_id (FK)" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=3;" vertex="1" parent="viajes_table">
+          <mxGeometry y="122" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="viajes_f1" value="origen_direccion" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="viajes_table">
+          <mxGeometry y="146" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="viajes_f2" value="destino_direccion" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="viajes_table">
+          <mxGeometry y="170" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="viajes_f3" value="fecha_hora_inicio" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="viajes_table">
+          <mxGeometry y="194" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="viajes_f4" value="fecha_hora_fin" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="viajes_table">
+          <mxGeometry y="218" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="viajes_f5" value="distancia_km" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="viajes_table">
+          <mxGeometry y="242" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="viajes_f6" value="duracion_minutos" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="viajes_table">
+          <mxGeometry y="266" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="viajes_f7" value="estado_viaje" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="viajes_table">
+          <mxGeometry y="290" width="220" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- TABLA FACTURACION -->
+        <mxCell id="facturacion_table" value="" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="590" y="380" width="220" height="242" as="geometry"/>
+        </mxCell>
+        <mxCell id="facturacion_title" value="FACTURACION" style="text;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;" vertex="1" parent="facturacion_table">
+          <mxGeometry y="26" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="facturacion_pk" value="factura_id (PK)" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;" vertex="1" parent="facturacion_table">
+          <mxGeometry y="50" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="facturacion_fk1" value="viaje_id (FK)" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=3;" vertex="1" parent="facturacion_table">
+          <mxGeometry y="74" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="facturacion_fk2" value="usuario_id (FK)" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=3;" vertex="1" parent="facturacion_table">
+          <mxGeometry y="98" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="facturacion_f1" value="fecha_factura" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="facturacion_table">
+          <mxGeometry y="122" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="facturacion_f2" value="monto_base" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="facturacion_table">
+          <mxGeometry y="146" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="facturacion_f3" value="descuentos" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="facturacion_table">
+          <mxGeometry y="170" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="facturacion_f4" value="recargos" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="facturacion_table">
+          <mxGeometry y="194" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="facturacion_f5" value="monto_total" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="facturacion_table">
+          <mxGeometry y="218" width="220" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- TABLA RENOVACIONES_PLAN -->
+        <mxCell id="renovaciones_table" value="" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="50" y="380" width="220" height="194" as="geometry"/>
+        </mxCell>
+        <mxCell id="renovaciones_title" value="RENOVACIONES_PLAN" style="text;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;" vertex="1" parent="renovaciones_table">
+          <mxGeometry y="26" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="renovaciones_pk" value="renovacion_id (PK)" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;" vertex="1" parent="renovaciones_table">
+          <mxGeometry y="50" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="renovaciones_fk1" value="usuario_id (FK)" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=3;" vertex="1" parent="renovaciones_table">
+          <mxGeometry y="74" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="renovaciones_fk2" value="categoria_anterior (FK)" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=3;" vertex="1" parent="renovaciones_table">
+          <mxGeometry y="98" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="renovaciones_fk3" value="categoria_nueva (FK)" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=3;" vertex="1" parent="renovaciones_table">
+          <mxGeometry y="122" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="renovaciones_f1" value="fecha_renovacion" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="renovaciones_table">
+          <mxGeometry y="146" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="renovaciones_f2" value="monto_pagado" style="text;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="renovaciones_table">
+          <mxGeometry y="170" width="220" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- RELACIONES -->
+        
+        <!-- Usuario -> Categoria -->
+        <mxCell id="rel_usuario_categoria" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="usuarios_fk1" target="categorias_pk">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="350" as="sourcePoint"/>
+            <mxPoint x="450" y="300" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Conductor -> Vehiculo -->
+        <mxCell id="rel_conductor_vehiculo" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="conductores_pk" target="vehiculos_fk1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="350" as="sourcePoint"/>
+            <mxPoint x="750" y="300" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Usuario -> Viaje -->
+        <mxCell id="rel_usuario_viaje" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="usuarios_table" target="viajes_fk1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="450" as="sourcePoint"/>
+            <mxPoint x="350" y="400" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Conductor -> Viaje -->
+        <mxCell id="rel_conductor_viaje" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="conductores_table" target="viajes_fk2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="450" as="sourcePoint"/>
+            <mxPoint x="650" y="400" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Vehiculo -> Viaje -->
+        <mxCell id="rel_vehiculo_viaje" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="vehiculos_table" target="viajes_fk3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="800" y="450" as="sourcePoint"/>
+            <mxPoint x="850" y="400" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Viaje -> Facturación -->
+        <mxCell id="rel_viaje_facturacion" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="viajes_pk" target="facturacion_fk1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="500" as="sourcePoint"/>
+            <mxPoint x="650" y="450" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Usuario -> Facturación -->
+        <mxCell id="rel_usuario_facturacion" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="usuarios_table" target="facturacion_fk2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="550" as="sourcePoint"/>
+            <mxPoint x="450" y="500" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Usuario -> Renovaciones -->
+        <mxCell id="rel_usuario_renovaciones" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="usuarios_table" target="renovaciones_fk1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="450" as="sourcePoint"/>
+            <mxPoint x="250" y="400" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Categorías -> Renovaciones (anterior) -->
+        <mxCell id="rel_categoria_renovaciones_ant" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="categorias_table" target="renovaciones_fk2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="350" as="sourcePoint"/>
+            <mxPoint x="350" y="300" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Categorías -> Renovaciones (nueva) -->
+        <mxCell id="rel_categoria_renovaciones_new" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;strokeWidth=1;dashed=1;" edge="1" parent="1" source="categorias_table" target="renovaciones_fk3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="380" as="sourcePoint"/>
+            <mxPoint x="350" y="330" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ETIQUETAS DE CARDINALIDAD -->
+        <mxCell id="card_usuario_categoria" value="N:1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="160" width="30" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="card_conductor_vehiculo" value="1:N" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="160" width="30" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="card_usuario_viaje" value="1:N" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="350" width="30" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="card_conductor_viaje" value="1:N" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="350" width="30" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="card_vehiculo_viaje" value="1:N" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="350" width="30" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="card_viaje_facturacion" value="1:1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="440" width="30" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="card_usuario_facturacion" value="1:N" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="350" width="30" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="card_usuario_renovaciones" value="1:N" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="350" width="30" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="card_categoria_renovaciones" value="1:N" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="320" width="30" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- NOTA SIMPLE -->
+        <mxCell id="note_simple" value="Diagrama Entidad-Relación&#xa;Sistema de Base de Datos Uber&#xa;&#xa;PK = Clave Primaria&#xa;FK = Clave Foránea (en cursiva)&#xa;&#xa;Relaciones:&#xa;1:1 = Uno a Uno&#xa;1:N = Uno a Muchos&#xa;N:1 = Muchos a Uno" style="text;html=1;strokeColor=#000000;fillColor=#ffffff;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;spacingLeft=10;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="860" y="380" width="200" height="160" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+          
